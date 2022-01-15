@@ -1,0 +1,23 @@
+{
+  "name": "messagingapp",
+  "version": "1.0.0",
+  "description": "Real time encrypted chat app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Bruno Mircevski, Kamil Micota, Jakub Mieczkowski",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hybrid-crypto-js": "^0.2.4",
+    "mysql": "^2.18.1",
+    "socket.io": "^4.4.0",
+    "sync-mysql": "^3.0.1",
+    "sync-sql": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) 220px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    font-family: monospace;
+    margin: 0;
+    color: white;
+}
+.left-panel {
+    grid-area: 1 / 1 / 2 / 2;
+    height: 100vh;
+}
+.center-panel {
+    grid-area: 1 / 2 / 2 / 3;
+    height: 100vh;
+}
+.right-panel {
+    grid-area: 1 / 3 / 2 / 4;
+    height: 100vh;
+}
+
+/* LEFT PANEL*/
+.page-logo {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 5px 5px 0px #8b4a9b;
+    font-weight: 400;
+    margin: 12px;
+}
+.new-room-btn {
+    color: #8b4a9b;
+    cursor: pointer;
+    margin: 15px 0 35px 15px;
+    font-size: 1rem;
+    text-decoration: underline;
+    display: block;
+}
+.new-room-btn:hover {
+    color: #37fecd;
+}
+.room-list {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    overflow-y: scroll;
+    max-height: calc(100vh - 200px);
+}
+.room-list li {
+    display: block;
+    background-color: #3E065F;
+    margin: 5px 5px 5px 0;
+    padding: 8px 8px 16px 10px;
+    border-radius: 0 20px 20px 0;
+    text-shadow: rgb(0 0 0 / 10%) 2px 2px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: .3s;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.room-list li:hover, .room-list li.active {
+    background-color: #37fecd;
+    color: black;
+}
+.room-list-date {
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0.7rem;
+    left: 10px;
+    margin-top: 17px;
+    color: #aaa;
+}
+li.active .room-list-date {
+    color: #333;
+}
+
+/* CENTER PANEL*/
+.chat-title-box {
+    width: 100%;
+    margin-top: 20px;
+}
+.chat-name {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 3px 3px 0px #8b4a9b;
+    font-weight: 400;
+    margin: 0 3px; 
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: calc(100% - 120px);
+}
+.chat-icon {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    overflow: hidden;
+    transform: translate(0, 5px);
+    border: 2px solid #8b4a9b;
+}
+.chat-container {
+    margin-top: 20px;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 20px;
+    height: calc(100% - 100px);
+    width: calc(100% - 5px);
+    border: 2px solid #3E065F;
+}
+.chat-box {
+    height: calc(100% - 40px);
+    border-radius: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+    width: calc(100% + 35px);
+    padding-right: 35px;
+}
+.send-message-form {
+    display: block;
+    background-color: #333;
+    width: 100%;
+    border-radius: 10px;
+}
+.send-message-form input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: calc(100% - 75px);
+    background-color: #333;
+    margin: 0;
+    display: inline-block;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #3E065F;
+    border-right: none;
+    color: white;
+}
+.send-message-form button{
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 75px;
+    background-color: #8b4a9b;
+    margin: 0;
+    display: inline-block;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    transition: .3s;
+    border: 2px solid #3E065F;
+    border-left: none;
+}
+.send-message-form button:hover {
+    background-color: #37fecd;
+    color: black;
+}
+.message-container {
+    clear: both;
+}
+.message-container p {
+    background-color: #333;
+    min-width: 300px;
+    max-width: 600px;
+    width: 70%;
+    padding: 12px;
+    float: left;
+    margin: 3px 0;
+    border-radius: 10px; 
+    color: white;
+    font-size: 0.9rem;
+}
+.message-container p.my-message {
+    background-color: #3E065F;
+    float: right;
+} 
+.chat-box span.metadata {
+    color: #bbb;
+    font-size: 0.7rem;
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.chat-box span.my-message {
+    float: right;
+    text-align: right;
+}
+.highlight {
+    background-color: #8b4a9b;
+}
+
+/* RIGHT PANEL*/
+.chat-settings-panel {
+    width: 100%;
+    overflow: hidden;
+    height: calc(100vh - 300px);
+    padding-top: 40px;
+}
+.user-panel {
+    width: 100%;
+    overflow: hidden;
+    height: 290px;
+}
+.right-panel-headings {
+    font-size: 1rem;
+    color: #eee;
+    margin-top: 20px;
+}
+.right-panel-headings:first-of-type {
+    margin-top: 45px;
+}
+.right-panel button {
+    background-color: #8b4a9b;
+    transition: .3s;
+    border: none;
+    cursor: pointer;
+    color: #eee;
+    font-weight: 700;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    border: 1px solid #3E065F;
+}
+.right-panel button:hover {
+    background-color: #37fecd;
+    color: black;
+}
+.right-panel input {
+    background-color: #222;
+    border: 1px solid #3E065F;
+    padding: 4px;
+    outline: none;
+    display: inline-block;
+    width: calc(100% - 60px);
+    height: 25px;
+    margin-bottom: 5px;
+    color: white;
+}
+.request-box .request p{
+    margin: 0;
+    font-size: 0.8rem;
+}
+.request-box .accept {
+    color: #37fecd;
+}
+.request-box .reject {
+    color: #8b4a9b;
+    text-align: right;
+}
+.request-box span {
+    display: inline-block;
+    width: 49%;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: .3s;
+}
+.request-box .request {
+    margin-bottom: 10px;
+}
+.request-box {
+    overflow: hidden;
+    height: 160px;
+    padding-right: 15px;
+}
+.user-info-box {
+    margin-top: 30px;
+    width: 99%;
+    overflow: hidden;
+    height: 60px;
+}
+.user-info-box img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+.user-info-box p {
+    display: inline-block;
+    width: calc(100% - 40px);
+}
+.user-panel .right-panel-headings {
+    margin-top: 10px;
+}
+.leave-room-btn {
+    color: #8b4a9b;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    padding: 5px 0;
+    display: block;
+    width: 50px;
+}
+.leave-room-btn:hover {
+    color: #37fecd;
+}
+.room-user-list {
+    color: #eee;
+    min-height: 40px;
+}
+
+/* Scrollbar style */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+    cursor: pointer;
+} 
+::-webkit-scrollbar-track {
+    background: #3E065F;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #8b4a9b;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #37fecd;  
+}
+
+.display-none {
+    display: none;
+}
