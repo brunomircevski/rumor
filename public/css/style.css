@@ -281,6 +281,7 @@ li.active .room-list-date {
     overflow: hidden;
     height: 140px;
     padding-right: 15px;
+    font-size: 0.8rem;
 }
 .user-info-box {
     margin-top: 30px;
