@@ -217,7 +217,7 @@ li.active .room-list-date {
 .user-panel {
     width: 100%;
     overflow: hidden;
-    height: 280px;
+    height: 290px;
 }
 .right-panel-headings {
     font-size: 1.2rem;
@@ -405,11 +405,11 @@ li.active .room-list-date {
         grid-template-columns: 0 0 1fr;
     }
     .left-panel, .center-panel, .right-panel {
-        height: calc(100vh - 130px);
+        height: calc(100vh - 120px);
     }
 
     .chat-settings-panel {
-        height: calc(100vh - 440px);
+        height: calc(100vh - 430px);
         padding-top: 0;
     }
     .chat-container {
