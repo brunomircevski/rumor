@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    color: #eee;
+}
+.container {
+    margin: auto;
+    max-width: 800px;
+    width: 100%
+}
+h1 {
+    font-size: 100px;
+    text-shadow: 5px 5px 0px #8b4a9b;
+    font-weight: 400;
+    text-align: center;
+    margin: 30px 0;
+}
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 36px;
+}
+b {
+    color: #37fecd;
+}
+div.what-we-know > div{
+    float: left;
+    width: 400px;
+}
+div.what-we-know {
+    clear: both;
+}
+h3 {
+    color: #b861ce;
+    font-size: 28px;
+    text-align: center;
+}
+h3.dont-know {
+    color: #37fecd;
+}
+ul {
+    font-size: 20px;
+    margin-bottom: 80px;
+}
+.details {
+    text-align: center;
+    line-height: 26px;
+    font-size: 16x;
+    color: #aaa;
+    margin-top: 100px;
+}
+a {
+    color: #8b4a9b;
+}
+.open-rumor-button {
+    width: 70%;
+    display: block;
+    margin: auto;
+    max-width: 350px;
+    padding: 20px;
+    color: white;
+    background-color: #8b4a9b;
+    text-decoration: none;
+    font-size: 36px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-align: center;
+    transition: .3s;
+}
+.open-rumor-button:hover {
+    color: black;
+    background-color: #37fecd;
+}
+
+@media screen and (max-width: 850px) {
+    div.what-we-know div{
+        float: none;
+        width: 70%;
+        min-width: 310px;
+        margin: auto;
+    }
+    div.what-we-know {
+        clear: none;
+    }
+    .container {
+        width: 90%;
+        min-width: 320px;
+    }
+}

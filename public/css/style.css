@@ -140,6 +140,7 @@ li.active .room-list-date {
 }
 .send-message-form input{
     height: 38px;
+    width: calc(100% - 40px);
     display: block;
     background-color: transparent;
     border: none;
@@ -284,7 +285,7 @@ li.active .room-list-date {
     font-size: 0.8rem;
 }
 .user-info-box {
-    margin-top: 30px;
+    margin-top: 40px;
     width: 99%;
     overflow: hidden;
     height: 60px;
@@ -342,9 +343,21 @@ li.active .room-list-date {
 ::-webkit-scrollbar-thumb:hover {
     background: #37fecd;  
 }
-
 .display-none {
     display: none;
+}
+.about-link {
+    padding: 15px 10px;
+    display: block;
+    position: absolute;
+    color: #8b4a9b;;
+    bottom: 0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+.about-link:hover {
+    color: #37fecd;  
 }
 
 /* Mobile */
