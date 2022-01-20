@@ -440,7 +440,7 @@ const messageList = {
 searchForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    searchPattern = e.target.elements[0].value.normalize();
+    searchPattern = e.target.elements[0].value.normalize().toLowerCase().split("");
 
     if(searchPattern.length == 0) openRoom();
 
@@ -456,8 +456,6 @@ searchForm.addEventListener('submit', e => {
             });
             messageList.roomId = activeRoom.id;
         }
-    
-        e.target.elements[0].value = '';
     }
 });
 
@@ -470,6 +468,7 @@ socket.on('getMessagesResponse', r => {
             content: crypt.decrypt(activeRoom.secret, e.content).message
         });
     });
+    messageList.msg.reverse()
     searchAndDisplay();
 });
 
@@ -477,8 +476,8 @@ function searchAndDisplay() {
     chatNameBox.innerHTML = 'Wyszukiwanie';
     messageBox.innerHTML = '';
     stopAddingMessagesWhenSearching = true;
-    messageList.msg.reverse().forEach(e => {
-        const message = searchh(e.content.toLowerCase().split(' '), searchPattern.toLowerCase().split(' '));
+    messageList.msg.forEach(e => {
+        const message = searchh(e.content.toLowerCase().split(""), searchPattern);
         if(message) insertMsg(message, e.username, e.date, true);
     });
 }

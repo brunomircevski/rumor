@@ -59,8 +59,7 @@ function searchh(txt, pat) {
         search_position+=1;
         found = true;
   }
-      //document.write("Patterns occur at shift = " + s);
-
+      
       /* Shift the pattern so that the next
          character in text aligns with the last
          occurrence of it in pattern.
@@ -81,8 +80,9 @@ function searchh(txt, pat) {
          character. */
       s += max(1, j - badchar[txt[s + j].charCodeAt(0)]);
   }
-  if(found) return tokens.join(' ');
+if(found) return tokens.join('');
   else return false;
+
 }
 
 /* Driver program to test above function */
