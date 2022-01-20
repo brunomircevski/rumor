@@ -198,6 +198,8 @@ function getRoomSecret(id, name) {
     activeRoom.prevId = activeRoom.id;
     activeRoom.id = id;
     activeRoom.name = name;
+
+    mobileButtonCenter.click();
 }
 
 socket.on('getRoomSecretResponse', r => {
@@ -428,7 +430,7 @@ function popup(msg, doNotFadeOut) {
 }
 
 // ######################################
-//              Wyszukiwanie
+//               Searching
 // ######################################
 const searchForm = document.querySelector('.search-form');
 let searchPattern = null;
@@ -456,6 +458,8 @@ searchForm.addEventListener('submit', e => {
             });
             messageList.roomId = activeRoom.id;
         }
+
+        mobileButtonCenter.click();
     }
 });
 
@@ -481,3 +485,46 @@ function searchAndDisplay() {
         if(message) insertMsg(message, e.username, e.date, true);
     });
 }
+
+// ######################################
+//              Mobile Menu
+// ######################################
+const mobileButtonLeft = document.querySelector('.mobile-left-panel-btn');
+const mobileButtonCenter = document.querySelector('.mobile-center-panel-btn');
+const mobileButtonRight = document.querySelector('.mobile-right-panel-btn');
+
+const panelLeft = document.querySelector('.left-panel');
+const panelCenter = document.querySelector('.center-panel');
+const panelRight = document.querySelector('.right-panel');
+
+const mainContainer = document.querySelector('.container');
+
+mobileButtonLeft.addEventListener('click', e => {
+    panelLeft.classList = 'left-panel';
+    panelCenter.classList = 'center-panel mobile-display-none';
+    panelRight.classList = 'right-panel mobile-display-none';
+    mainContainer.classList = 'container left-panel-acive';
+    mobileButtonRight.classList = 'mobile-right-panel-btn'
+    mobileButtonCenter.classList = 'mobile-center-panel-btn'
+    mobileButtonLeft.classList = 'mobile-left-panel-btn mobile-menu-active'
+});
+
+mobileButtonCenter.addEventListener('click', e => {
+    panelLeft.classList = 'left-panel mobile-display-none';
+    panelCenter.classList = 'center-panel';
+    panelRight.classList = 'right-panel mobile-display-none';
+    mainContainer.classList = 'container center-panel-acive';
+    mobileButtonRight.classList = 'mobile-right-panel-btn'
+    mobileButtonCenter.classList = 'mobile-center-panel-btn mobile-menu-active'
+    mobileButtonLeft.classList = 'mobile-left-panel-btn'
+});
+
+mobileButtonRight.addEventListener('click', e => {
+    panelLeft.classList = 'left-panel mobile-display-none';
+    panelCenter.classList = 'center-panel mobile-display-none';
+    panelRight.classList = 'right-panel';
+    mainContainer.classList = 'container right-panel-acive';
+    mobileButtonRight.classList = 'mobile-right-panel-btn mobile-menu-active'
+    mobileButtonCenter.classList = 'mobile-center-panel-btn'
+    mobileButtonLeft.classList = 'mobile-left-panel-btn'
+});

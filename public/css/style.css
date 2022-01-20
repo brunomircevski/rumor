@@ -3,14 +3,16 @@
 }
 body {
     background-color: black;
+    font-family: monospace;
+    margin: 0;
+    color: white;
+}
+.container {
     display: grid;
     grid-template-columns: 220px minmax(0, 1fr) 220px;
     grid-template-rows: 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 0px;
-    font-family: monospace;
-    margin: 0;
-    color: white;
 }
 .left-panel {
     grid-area: 1 / 1 / 2 / 2;
@@ -55,7 +57,7 @@ body {
     display: block;
     background-color: #3E065F;
     margin: 5px 5px 5px 0;
-    padding: 8px 8px 16px 10px;
+    padding: 8px 8px 20px 10px;
     border-radius: 0 20px 20px 0;
     text-shadow: rgb(0 0 0 / 10%) 2px 2px;
     font-size: 0.9rem;
@@ -169,9 +171,9 @@ li.active .room-list-date {
 }
 .message-container p {
     background-color: #333;
-    min-width: 300px;
+    min-width: 280px;
     max-width: 600px;
-    width: 70%;
+    width: 80%;
     padding: 12px;
     float: left;
     margin: 3px 0;
@@ -329,4 +331,114 @@ li.active .room-list-date {
 
 .display-none {
     display: none;
+}
+
+/* Mobile */
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .mobile-display-none {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+        width: 100%;
+        height: 60px;
+        background-color: #3E065F;
+    }
+    .mobile-menu button {
+        width: 33.3%;
+        display: inline-block;
+        margin-top: 8px;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu button img {
+        width: 40px;
+        height: 40px;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+    .mobile-menu button:hover img, .mobile-menu-active button img {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    div.left-panel-acive {
+        grid-template-columns: 1fr 0 0;
+    }
+    div.center-panel-acive {
+        grid-template-columns: 0 1fr 0;
+    }
+    div.right-panel-acive {
+        grid-template-columns: 0 0 1fr;
+    }
+    .left-panel, .center-panel, .right-panel {
+        height: calc(100vh - 70px);
+    }
+
+    .chat-settings-panel {
+        height: calc(100vh - 380px);
+        padding-top: 0;
+    }
+    .chat-container {
+        padding: 10px;
+        width: 100%;
+    }
+    .chat-box {
+        width: 100%;
+        padding-right: 0;
+        scrollbar-width: none;
+    }
+    .chat-box::-webkit-scrollbar, .room-list::-webkit-scrollbar {
+        display: none;
+    }
+    .room-list {
+        scrollbar-width: none;
+    }
+    .right-panel {
+        margin-left: -10px;
+        width: calc(100% - 10px)
+    }
+    .room-list li {
+        padding: 12px 12px 28px 20px;
+        font-size: 1rem;
+        margin: 10px 0; 
+    }
+    .room-list-date {
+        font-size: 0.8rem;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    h1.page-logo {
+        font-size: 4rem;
+        margin: 40px 10px 20px 20px;
+    }
+    .new-room-btn {
+        font-size: 1.2rem;
+        margin: 20px 10px 40px 22px
+    }
+    .right-panel-headings {
+        font-size: 1.2rem;
+    }    
+    .request-box .accept, .request-box .reject {
+        font-size: 1rem;
+    }
+    .request-box .request p {
+        font-size: 0.9rem;
+    }
+    .right-panel input {
+        padding: 10px;
+        font-size: 0.9rem;
+        height: 35px;
+        margin-bottom: 15px;
+    }
+    .leave-room-btn {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
 }

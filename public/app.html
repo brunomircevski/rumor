@@ -3,63 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Rumor</title>
 </head>
 <body>
-    <section class="left-panel">
-        <h1 class="page-logo">Rumor</h1>
-        <span class="new-room-btn">Create new room</span>
-        <ul class="room-list"></ul>
+    <section class="mobile-menu">
+        <button class="mobile-left-panel-btn mobile-menu-active"><img src="img/icons8-menu-rounded-64.png" alt=""></button><button class="mobile-center-panel-btn"><img src="img/icons8-chat-64.png" alt=""></button><button class="mobile-right-panel-btn"><img src="img/icons8-settings-64.png" alt=""></button>
     </section>
-
-    <section class="center-panel">
-        <div class="chat-title-box">
-            <img src="img/userIcon.jpg" alt="" class="chat-icon">
-            <h2 class="chat-name"></h2>
-        </div>
-
-        <div class="chat-container">
-            <div class="chat-box"></div>
-            <form action="" class="send-message-form">
-                <input type="text" placeholder="Type something..." maxlength="1000"><button>Send</button>
-            </form>
-        </div>
-    </section>
-
-    <section class="right-panel">
-        <div class="chat-settings-panel">
-            <h3 class="right-panel-headings">Users in room:</h3>
-            <div class="room-user-list"></div>
-            
-            <h3 class="right-panel-headings">Search</h3>
-            <form action="" class="search-form">
-                <input type="text" placeholder="Write a message...">
-                <button>ok</button>
-            </form>
-            
-            <h3 class="right-panel-headings">Room settings</h3>
-            <form action="" class="invite-form">
-                <input type="text" placeholder="invite username">
-                <button>ok</button>
-            </form>
-            <form action="" class="change-chat-name-form">
-                <input type="text" placeholder="change room name">
-                <button>ok</button>
-            </form>
-            <span class="leave-room-btn">Leave</span>
-        </div>
-        
-        <div class="user-panel">
-            <h3 class="right-panel-headings">Your requests</h3>
-            <div class="request-box"></div>
-            <div class="user-info-box">
-                <p class="tmp">Your username:<br></p><a href="logout.html"><img src="img/logout.jpg"></a>
+    <div class="container left-panel-acive">
+        <section class="left-panel">
+            <h1 class="page-logo">Rumor</h1>
+            <span class="new-room-btn">Create new room</span>
+            <ul class="room-list"></ul>
+        </section>
+    
+        <section class="center-panel mobile-display-none">
+            <div class="chat-title-box">
+                <img src="img/userIcon.jpg" alt="" class="chat-icon">
+                <h2 class="chat-name"></h2>
             </div>
-        </div>
-    </section>
-
+    
+            <div class="chat-container">
+                <div class="chat-box"></div>
+                <form action="" class="send-message-form">
+                    <input type="text" placeholder="Type something..." maxlength="1000"><button>Send</button>
+                </form>
+            </div>
+        </section>
+    
+        <section class="right-panel mobile-display-none">
+            <div class="chat-settings-panel">
+                <h3 class="right-panel-headings">Users in room:</h3>
+                <div class="room-user-list"></div>
+                
+                <h3 class="right-panel-headings">Room options</h3>
+                <form action="" class="search-form">
+                    <input type="text" placeholder="type to search">
+                    <button>ok</button>
+                </form>
+                <form action="" class="invite-form">
+                    <input type="text" placeholder="invite username">
+                    <button>ok</button>
+                </form>
+                <form action="" class="change-chat-name-form">
+                    <input type="text" placeholder="change room name">
+                    <button>ok</button>
+                </form>
+                <span class="leave-room-btn">Leave</span>
+            </div>
+            
+            <div class="user-panel">
+                <h3 class="right-panel-headings">Your requests</h3>
+                <div class="request-box"></div>
+                <div class="user-info-box">
+                    <p class="tmp">Your username:<br></p><a href="logout.html"><img src="img/logout.jpg"></a>
+                </div>
+            </div>
+        </section>
+    </div>
     
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/hybrid-crypto.min.js"></script>
