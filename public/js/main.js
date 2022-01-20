@@ -5,8 +5,8 @@ const myPublicKey = localStorage.getItem('myPublicKey');
 
 if(!username || !passwordHash || !secret) window.location.replace("logout.html");
 
-const tmpUsername = document.querySelector(".tmp");
-tmpUsername.innerHTML += username;
+const usernameBox = document.querySelector(".your-username-box");
+usernameBox.innerHTML += username;
 
 const socket = io();
 
