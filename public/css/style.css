@@ -363,8 +363,8 @@ li.active .room-list-date {
         opacity: 0.6;
         transition: 0.3s;
     }
-    .mobile-menu button:hover img, .mobile-menu-active button img {
-        opacity: 1;
+    .mobile-menu button:hover img, .mobile-menu-active img {
+        opacity: 1 !important;
         transform: scale(1.1);
     }
 
@@ -378,11 +378,11 @@ li.active .room-list-date {
         grid-template-columns: 0 0 1fr;
     }
     .left-panel, .center-panel, .right-panel {
-        height: calc(100vh - 70px);
+        height: calc(100vh - 130px);
     }
 
     .chat-settings-panel {
-        height: calc(100vh - 380px);
+        height: calc(100vh - 440px);
         padding-top: 0;
     }
     .chat-container {
