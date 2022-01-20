@@ -3,7 +3,7 @@
 }
 body {
     background-color: black;
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     color: white;
 }
@@ -28,18 +28,19 @@ body {
 }
 
 /* LEFT PANEL*/
-.page-logo {
+h1.page-logo {
     font-size: 3rem;
     color: #fff;
     text-shadow: 5px 5px 0px #8b4a9b;
     font-weight: 400;
     margin: 12px;
+    font-family: "Times New Roman", Times, serif;
 }
 .new-room-btn {
     color: #8b4a9b;
     cursor: pointer;
     margin: 15px 0 35px 15px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-decoration: underline;
     display: block;
 }
@@ -78,10 +79,10 @@ body {
     font-size: 0.7rem;
     left: 10px;
     margin-top: 17px;
-    color: #aaa;
+    color: #eee;
 }
 li.active .room-list-date {
-    color: #333;
+    color: black;
 }
 
 /* CENTER PANEL*/
@@ -114,13 +115,14 @@ li.active .room-list-date {
     margin-top: 20px;
     background-color: #111;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 35px;
     height: calc(100% - 100px);
     width: calc(100% - 5px);
     border: 2px solid #3E065F;
 }
 .chat-box {
-    height: calc(100% - 40px);
+    height: calc(100% - 50px);
+    margin-bottom: 10px;
     border-radius: 20px;
     overflow: hidden;
     overflow-y: scroll;
@@ -129,42 +131,43 @@ li.active .room-list-date {
 }
 .send-message-form {
     display: block;
-    background-color: #333;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 20px;
+    height: 40px;
+    background-color: #333;
+    border: 1px solid #3E065F;
+    position: relative;
 }
 .send-message-form input{
+    height: 38px;
+    display: block;
+    background-color: transparent;
     border: none;
     outline: none;
-    padding: 10px;
-    width: calc(100% - 75px);
-    background-color: #333;
-    margin: 0;
-    display: inline-block;
-    border-radius: 10px 0 0 10px;
-    border: 2px solid #3E065F;
-    border-right: none;
-    color: white;
+    color: #eee;
+    margin-left: 5px;
+    padding: 10px
 }
 .send-message-form button{
-    border: none;
-    outline: none;
-    padding: 10px;
-    width: 75px;
+    height: 30px;
+    width: 30px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    border-radius: 50%;
+    margin: 4px;
     background-color: #8b4a9b;
-    margin: 0;
-    display: inline-block;
-    border-radius: 0 10px 10px 0;
     cursor: pointer;
-    color: white;
-    font-weight: 700;
+    border: none;
     transition: .3s;
-    border: 2px solid #3E065F;
-    border-left: none;
+}
+.send-message-form button img {
+    height: 22px;
+    transform: translate(-3px, 3px);
 }
 .send-message-form button:hover {
     background-color: #37fecd;
-    color: black;
 }
 .message-container {
     clear: both;
@@ -179,7 +182,9 @@ li.active .room-list-date {
     margin: 3px 0;
     border-radius: 10px; 
     color: white;
+    text-align: justify;
     font-size: 0.9rem;
+    line-height: 1.1rem;
 }
 .message-container p.my-message {
     background-color: #3E065F;
@@ -211,12 +216,13 @@ li.active .room-list-date {
 .user-panel {
     width: 100%;
     overflow: hidden;
-    height: 290px;
+    height: 280px;
 }
 .right-panel-headings {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #eee;
     margin-top: 20px;
+    font-family: "Times New Roman", Times, serif;
 }
 .right-panel-headings:first-of-type {
     margin-top: 45px;
@@ -273,7 +279,7 @@ li.active .room-list-date {
 }
 .request-box {
     overflow: hidden;
-    height: 160px;
+    height: 140px;
     padding-right: 15px;
 }
 .user-info-box {
@@ -286,9 +292,14 @@ li.active .room-list-date {
     width: 30px;
     height: 30px;
     display: inline-block;
+    transition: .3s;
+}
+.user-info-box img:hover {
+    transform: scale(1.2);
 }
 .user-info-box p {
     display: inline-block;
+    font-size: 0.9rem;
     width: calc(100% - 40px);
 }
 .user-panel .right-panel-headings {
@@ -302,6 +313,7 @@ li.active .room-list-date {
     padding: 5px 0;
     display: block;
     width: 50px;
+    font-weight: 700;
 }
 .leave-room-btn:hover {
     color: #37fecd;
@@ -309,6 +321,7 @@ li.active .room-list-date {
 .room-user-list {
     color: #eee;
     min-height: 40px;
+    font-size: 0.9rem;
 }
 
 /* Scrollbar style */
@@ -423,13 +436,10 @@ li.active .room-list-date {
         margin: 20px 10px 40px 22px
     }
     .right-panel-headings {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }    
     .request-box .accept, .request-box .reject {
         font-size: 1rem;
-    }
-    .request-box .request p {
-        font-size: 0.9rem;
     }
     .right-panel input {
         padding: 10px;
@@ -440,5 +450,10 @@ li.active .room-list-date {
     .leave-room-btn {
         font-size: 1rem;
         padding: 10px 0;
+    }
+    .right-panel button {
+        font-size: 1rem;
+        width: 40px;
+        height: 35px;
     }
 }
