@@ -67,6 +67,7 @@ h1.page-logo {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    position: relative;
 }
 .room-list li:hover, .room-list li.active {
     background-color: #37fecd;
@@ -426,6 +427,7 @@ li.active .room-list-date {
     }
     .room-list {
         scrollbar-width: none;
+        max-height: calc(100vh - 380px);
     }
     .right-panel {
         margin-left: -10px;
