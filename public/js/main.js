@@ -327,7 +327,7 @@ socket.on('getRequestsResponse', r => {
     if(r) {
         r.forEach(e => {
             if(e.username == e.roomName) 
-                requestsBox.innerHTML += `<div class="request"><p>${e.username} wants you to be your friend (${e.date})</p><span data-id="${e.id}" class="accept">Accept</span><span data-id="${e.id}" class="reject">Reject</span>`;
+                requestsBox.innerHTML += `<div class="request"><p>${e.username} wants to be your friend (${e.date})</p><span data-id="${e.id}" class="accept">Accept</span><span data-id="${e.id}" class="reject">Reject</span>`;
             else
                 requestsBox.innerHTML += `<div class="request"><p>${e.username} wants you to join ${e.roomName} (${e.date})</p><span data-id="${e.id}" class="accept">Accept</span><span data-id="${e.id}" class="reject">Reject</span>`;
         });
