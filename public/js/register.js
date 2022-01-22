@@ -61,7 +61,7 @@ socket.on('usernameVerifyResult', r => {
     if(r==0) {
         usernameForm.classList.add('display-none');
         passwordForm.classList.remove('display-none');
-        newUsernameSpan.innerHTML += username+'!';
+        newUsernameSpan.innerHTML += 'Welcome, '+username+'!';
         errorBox.innerHTML = '';
     } else if(r==1) {
         displayError('Username must contain 6-20 characters!');
