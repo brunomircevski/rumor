@@ -2,8 +2,8 @@ const mysql = require('sync-mysql');
 
 const con = new mysql({
     host: "localhost",
-    user: "root",
-    password: "",
+    user: "db_user",
+    password: "root",
     database: "node"
 })
 
@@ -56,7 +56,7 @@ function createRoom(user, publicKey, creatorSecret) {
 
     try {
         const r = con.query(`SELECT COUNT(uir.roomId) c FROM userInRoom uir WHERE uir.userId = ? AND uir.roomId IN (SELECT roomId FROM userInRoom GROUP BY roomId HAVING COUNT(*) = 1)`, [user.id])
-        if(r[0].c > 1) return false;
+        if(r[0].c > 9) return false;
 
         const newId = con.query(`SELECT MAX(id) id FROM room`)[0].id + 1;
         con.query(`INSERT INTO room VALUES (?, '', ?, 0, NOW())`, [newId, publicKey]);
