@@ -4,105 +4,92 @@
 body {
     font-family: monospace;
     margin: 0;
+    background: url(../img/bgImage.jpg) repeat;
 
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(../img/bgImage.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 .display-none{
     display: none;
 }
-.title{
+h1.title{
     font-size: 5rem;
     color: #fff;
     text-shadow: 5px 5px 0px #8b4a9b;
-
-    top: 60px;
-    position: relative;
+    font-weight: 400;
     text-align: center;
-
-    cursor: default;
     font-family: "Times New Roman", Times, serif;
+    margin-bottom: 30px;
 }
 .form-box-login, .form-box-register{
-    width: 380px;
+    max-width: 350px;
+    width: 100%;
     height: 400px;
     position: relative;
-
-    top: 80px;
-    margin: auto;
-
+    margin: 20px auto;
+    padding: 10px;
     background: #fff;
-    padding: 2px;
-    box-shadow: 10px 15px #8b4a9b;
+    box-shadow: 10px 10px #8b4a9b;
 }
-.textInput {
-    width: 250px;
-    height: 40px;
+.text-input {
+    width: 75%;
     display: block;
-    margin: auto;
+    margin: 30px auto;
     border-color: black;
     background-color: white;
-    border-width: 0.125rem;
-    border-radius: 0rem;
+    border-width: 2px;
     box-shadow: rgba(0, 0, 0, 0.1) 4px 4px;
     font-size: 1rem;
     font-weight: 700;
-    font-family: monospace;
     letter-spacing: 1px;
     text-shadow: rgba(0, 0, 0, 0.1) 2px 2px;
     cursor: text;
     outline: none;
-    margin-top: 3rem;
+    padding: 10px;
 }
 .submit{
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-    font-family: monospace;
-    text-decoration: none;
+    width: 60%;
+    padding: 10px;
     color: #333;
     border: 2px solid #333;
     letter-spacing: 2px;
-    transition: all .35s;
+    transition: .35s;
     border-color: black;
-
     background-color: white;
-    border-width: 0.125rem;
-    border-radius: 0rem;
     box-shadow: inset 0 0 0 0, rgba(0, 0, 0, 0.1) 4px 4px;
     font-size: 1rem;
     font-weight: 700;
     text-shadow: rgba(0, 0, 0, 0.1) 2px 2px;
     cursor: pointer;
     outline: none;
-
     display: block;
-    text-align: center;
-    position: relative;
-    margin: auto;
-    margin-top: 2rem;
-
-    transition: ease-out 0.3s;
+    margin: 35px auto;
+    transition: 0.3s;
 }
 .submit:hover{
     box-shadow: inset 200px 0 0 0 #37fecd, rgba(0, 0, 0, 0.1) 4px 4px;
-    color: #000000;
+    color: #000;
 }
 .register-link{
     width: 100%;
-    font-size: 1rem;
+    display: block;
     color: #333;
     text-shadow: rgba(0, 0, 0, 0.1) 2px 2px;
-
-    top: 6rem;
-    position: relative;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
     text-align: center;
-    cursor: default;
-    font-weight: 600;
+    font-weight: 700;
+}
+.error-box {
+    color: red;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+.new-username {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    text-align: center;
+    width: 100%;
 }
