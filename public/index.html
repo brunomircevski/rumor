@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Rumor.</title>
 </head>
 <body>
-    <div class="form-box">
-        <img src="img/logo.png" alt="Messaging App">
+    <div class="title">Rumor.</div>
+    <div class="form-box-login">
         <form action="app.html" class="login-form">
-            <input type="text" placeholder="username">
-            <input type="password" placeholder="password">
-            <input class="submit" type="submit" value="Login">
+            <input class="textInput" type="text" placeholder="Username">
+            <input class="textInput" type="password" placeholder="Password">
+            <input class="submit" type="submit" value="login">
         </form>
         <span class="error-box"></span>
-        <span class="register-link">Don't have an account?- <a href="register.html">Register now</a></span>
+        <span class="register-link">Don't have an account?- <a class="link" href="register.html">Register now.</a></span>
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
