@@ -241,7 +241,7 @@ socket.on('changeRoomResponse', r => {
                 insertMsg(crypt.decrypt(activeRoom.secret, e.content).message, e.username, e.date);
             });
         } else {
-            messageBox.innerHTML = '<br><span>Room created. You can invite friends and send them a message!</span>';
+            messageBox.innerHTML = '<span style="color: #bbb; padding: 15px;">Room created. You can invite friends and send them a message!</span>';
         }
     } else {
         popup("Error. Wrong room id.");
