@@ -8,18 +8,20 @@
     <title>Rumor.</title>
 </head>
 <body>
-    <div class="title">Rumor.</div>
+    <h1 class="title">Rumor.</h1>
     <div class="form-box-register">
+        <span class="new-username">Pick your username</span>
         <form action="" class="register-username-form">
-            <input class="textInput" type="text" placeholder="Username" id="username" required>
+            <input class="text-input" type="text" placeholder="Username" id="username" required>
             <input class="submit" type="submit" value="Next">
         </form>
         <form action="app.html" class="register-password-form display-none">
-            <input class="textInput" type="password" placeholder="Password" id="password" required>
-            <input class="textInput" type="password" placeholder="Repeat Password" id="password2" required>
+            <input class="text-input" type="password" placeholder="Password" id="password" required>
+            <input class="text-input" type="password" placeholder="Repeat Password" id="password2" required>
             <input class="submit" type="submit" value="Register">
         </form>
         <span class="error-box"></span>
+        <span class="register-link">Already have an account? - <a class="link" href="index.html">Login now.</a></span>
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
