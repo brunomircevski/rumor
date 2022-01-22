@@ -11,6 +11,8 @@
   "license": "AGPL-3.0-or-later",
   "dependencies": {
     "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
     "hybrid-crypto-js": "^0.2.4",
     "mysql": "^2.18.1",
     "socket.io": "^4.4.0",

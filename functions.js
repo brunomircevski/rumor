@@ -2,9 +2,9 @@ const mysql = require('sync-mysql');
 
 const con = new mysql({
     host: "localhost",
-    user: "db_user",
-    password: "root",
-    database: "node"
+    user: "",
+    password: "",
+    database: ""
 })
 
 function getUserByUsername(username) {
