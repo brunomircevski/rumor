@@ -3,7 +3,7 @@
 }
 body {
     background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: monospace;
     margin: 0;
     color: white;
 }
@@ -33,44 +33,52 @@ h1.page-logo {
     color: #fff;
     text-shadow: 5px 5px 0px #8b4a9b;
     font-weight: 400;
-    margin: 12px;
+    margin: 5px;
     font-family: "Times New Roman", Times, serif;
 }
 .new-room-btn {
     color: #8b4a9b;
     cursor: pointer;
-    margin: 15px 0 35px 15px;
-    font-size: 1.1rem;
+    margin: 5px 0px 0px 5px;
+    font-size: 0.89rem;
     text-decoration: underline;
     display: block;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: .3s;
 }
 .new-room-btn:hover {
     color: #37fecd;
+    letter-spacing: 2px;
 }
 .room-list {
     display: block;
     list-style-type: none;
     padding: 0;
-    overflow-y: scroll;
-    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+    width: 235px;
 }
 .room-list li {
     display: block;
     background-color: #3E065F;
-    margin: 5px 5px 5px 0;
-    padding: 8px 8px 20px 10px;
+    margin: 0px 5px 5px 0;
+    padding: 11px 8px 25px 12px;
     border-radius: 0 20px 20px 0;
     text-shadow: rgb(0 0 0 / 10%) 2px 2px;
     font-size: 0.9rem;
     cursor: pointer;
-    transition: .3s;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     position: relative;
+    font-weight: 700;
 }
 .room-list li:hover, .room-list li.active {
     background-color: #37fecd;
+    color: black;
+}
+li.active .room-list-date, .room-list li:hover .room-list-date {
     color: black;
 }
 .room-list-date {
@@ -78,21 +86,17 @@ h1.page-logo {
     width: 0;
     height: 0;
     font-size: 0.7rem;
-    left: 10px;
+    left: 12px;
     margin-top: 17px;
     color: #eee;
 }
-li.active .room-list-date {
-    color: black;
-}
-
 /* CENTER PANEL*/
 .chat-title-box {
     width: 100%;
     margin-top: 20px;
 }
 .chat-name {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #fff;
     text-shadow: 3px 3px 0px #8b4a9b;
     font-weight: 400;
@@ -102,6 +106,7 @@ li.active .room-list-date {
     white-space: nowrap;
     overflow: hidden;
     width: calc(100% - 120px);
+    font-family: "Times New Roman", Times, serif;
 }
 .chat-icon {
     border-radius: 100%;
@@ -113,11 +118,11 @@ li.active .room-list-date {
     border: 2px solid #8b4a9b;
 }
 .chat-container {
-    margin-top: 20px;
+    margin-top: 28px;
     background-color: #111;
     padding: 20px;
     border-radius: 35px;
-    height: calc(100% - 100px);
+    height: calc(100% - 115px);
     width: calc(100% - 5px);
     border: 2px solid #3E065F;
 }
@@ -129,6 +134,7 @@ li.active .room-list-date {
     overflow-y: scroll;
     width: calc(100% + 35px);
     padding-right: 35px;
+    font-family: "Lato", sans-serif;
 }
 .send-message-form {
     display: block;
@@ -136,7 +142,6 @@ li.active .room-list-date {
     border-radius: 20px;
     height: 40px;
     background-color: #333;
-    border: 1px solid #3E065F;
     position: relative;
 }
 .send-message-form input{
@@ -151,8 +156,8 @@ li.active .room-list-date {
     padding: 10px
 }
 .send-message-form button{
-    height: 30px;
-    width: 30px;
+    height: 31px;
+    width: 31px;
     display: block;
     position: absolute;
     top: 0;
@@ -166,7 +171,7 @@ li.active .room-list-date {
 }
 .send-message-form button img {
     height: 22px;
-    transform: translate(-3px, 3px);
+    transform: translate(-2px, 2px);
 }
 .send-message-form button:hover {
     background-color: #37fecd;
@@ -199,10 +204,12 @@ li.active .room-list-date {
     float: left;
     width: 100%;
     margin-bottom: 20px;
+    margin-left: 10px;
 }
 .chat-box span.my-message {
     float: right;
     text-align: right;
+    margin-right: 10px;
 }
 .highlight {
     background-color: #8b4a9b;
@@ -227,7 +234,7 @@ li.active .room-list-date {
     font-family: "Times New Roman", Times, serif;
 }
 .right-panel-headings:first-of-type {
-    margin-top: 45px;
+    margin-top: 48px;
 }
 .right-panel button {
     background-color: #8b4a9b;
@@ -244,6 +251,7 @@ li.active .room-list-date {
 .right-panel button:hover {
     background-color: #37fecd;
     color: black;
+    border-color: #37fecd;
 }
 .right-panel input {
     background-color: #222;
@@ -262,10 +270,18 @@ li.active .room-list-date {
 }
 .request-box .accept {
     color: #37fecd;
+    letter-spacing: 1px;
 }
 .request-box .reject {
     color: #8b4a9b;
     text-align: right;
+    letter-spacing: 1px;
+}
+.request-box .accept:hover{
+    letter-spacing: 2px;
+}
+.request-box .reject:hover{
+    letter-spacing: 2px;
 }
 .request-box span {
     display: inline-block;
@@ -280,8 +296,8 @@ li.active .room-list-date {
     margin-bottom: 10px;
 }
 .request-box {
-    overflow: hidden;
-    height: 140px;
+    overflow-y: auto;
+    height: 145px;
     padding-right: 15px;
     font-size: 0.8rem;
 }
@@ -296,9 +312,11 @@ li.active .room-list-date {
     height: 30px;
     display: inline-block;
     transition: .3s;
+    opacity: 0.8;
 }
 .user-info-box img:hover {
     transform: scale(1.2);
+    opacity: 1;
 }
 .user-info-box p {
     display: inline-block;
@@ -317,9 +335,13 @@ li.active .room-list-date {
     display: block;
     width: 50px;
     font-weight: 700;
+
+    transition: 0.3s;
+    letter-spacing: 1px;
 }
 .leave-room-btn:hover {
     color: #37fecd;
+    letter-spacing: 2px;
 }
 .room-user-list {
     color: #eee;
@@ -348,17 +370,22 @@ li.active .room-list-date {
     display: none;
 }
 .about-link {
-    padding: 15px 10px;
     display: block;
     position: absolute;
     color: #8b4a9b;;
     bottom: 0;
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 0.9rem;
-    transition: .3s;
+    margin: 0 0 5px 5px;
+    
+    
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: 0.3s;
 }
 .about-link:hover {
     color: #37fecd;  
+    letter-spacing: 2px;
 }
 
 /* Mobile */
@@ -428,6 +455,7 @@ li.active .room-list-date {
     .room-list {
         scrollbar-width: none;
         max-height: calc(100vh - 380px);
+        width: 100%;
     }
     .right-panel {
         margin-left: -10px;
