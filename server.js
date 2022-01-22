@@ -1,5 +1,5 @@
 const path = require('path');
-const http = require('https');
+const https = require('https');
 const fs = require('fs');
 const express = require('express');
 const socketio = require('socket.io');
@@ -24,6 +24,11 @@ const {
 } = require('./functions.js');
 
 const app = express();
+const server = https.createServer({
+    key: fs.readFileSync("cert/privkey.pem"),
+    cert: fs.readFileSync("cert/fullchain.pem"),
+}, app);
+
 const io = socketio(server);
 
 //Set public folder
@@ -225,9 +230,6 @@ io.on('connection', socket => {
 //Run server
 const port = process.env.NODE_PORT || 3000;
 
-https.createServer({
-    key: fs.readFileSync("cert/privkey.pem"),
-    cert: fs.readFileSync("cert/fullchain.pem"),
-  }, app).listen(port, function () {
+server.listen(port, function () {
     console.log(`Server running on port ${port}`);
 });
