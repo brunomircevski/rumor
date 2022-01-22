@@ -13,6 +13,9 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+.display-none{
+    display: none;
+}
 .title{
     font-size: 5rem;
     color: #fff;
