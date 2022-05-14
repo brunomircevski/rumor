@@ -1,4 +1,4 @@
-# Rumor
+# Rumor.
 ### Simple real time chat application with end-to-end encryption.<br>
 ![App interface](https://github.com/brunomircevski/rumor/blob/main/gallery/app.png)<br>
 
