@@ -16,17 +16,26 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Project created in order to learn algorithms and data structures and technologies: JavaScript, HTML, CSS. 
+Project created in order to learn algorithms, data structures and technologies such as: JavaScript, HTML, CSS. 
 
 ## Functionality Of The Project:
 
-### Looking Through Items
-Items are added by admin user in conventional Django admin page. User can scroll through items and view details about them.
-Details will diverge from one another because of item category e.g. if the item belongs to category 'shoes' it will show shoe size instead of clothing size.
-![nexttry3](https://user-images.githubusercontent.com/85360923/174443231-f282eef2-5f5f-4c79-bb8c-0fc1ae5c0c31.gif)
+### Register
+Every user has to register to access chat app.
+![rumor1](https://user-images.githubusercontent.com/85360923/174446646-912d8502-835d-4747-8b7a-cd162977c79f.gif)
 
 <br />
 
+### Logging In and Out
+![rumor2](https://user-images.githubusercontent.com/85360923/174446792-956fa509-a3fa-4fd3-9157-e2ce2771c5dd.gif)
+
+<br />
+
+### About Rumor
+About rumor is page dedicated to our policy and license.
+![rumor3](https://user-images.githubusercontent.com/85360923/174447017-c3a6b686-f6a1-4038-b9ad-2ecc9f0fd6e1.gif)
+
+<br />
 
 ### Data known by the server: 
 <ul>
