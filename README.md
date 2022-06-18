@@ -16,7 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Project created in order to learn algorithms, data structures and technologies such as: JavaScript, HTML, CSS. 
+Project created in order to learn algorithms, data structures and technologies such as: JavaScript, HTML, CSS. We believe in freedom of speech and your right to communicate with people privately. We don’t read your messages, because we can’t. They are encrypted on your device. After you leave a room we don’t even know if you've ever been there. When you delete your account there is nothing left about you in our database.
 
 ## Functionality Of The Project:
 
