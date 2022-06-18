@@ -4,7 +4,9 @@
 <br />
 <div align="center">
   <a href="https://github.com/brunomircevski/rumor"> 
+    
     ![Zrzut ekranu 2022-06-18 173235](https://user-images.githubusercontent.com/85360923/174445751-137c403d-597d-4289-b93b-8e91ef400b49.png)
+    
   </a>
 
   <p align="center">
