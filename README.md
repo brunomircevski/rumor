@@ -76,9 +76,11 @@ Users can leave rooms in every moment they please.
 <li>Decryption keys</li>
 </ul>
 
-## Backend by Bruno Mircevski
-## Design and Frontend by Micota Kamil
-## Search algorithm by Jakub Mieczkowski
+<br />
+
+### Backend by Bruno Mircevski
+### Design and Frontend by Micota Kamil
+### Search algorithm by Jakub Mieczkowski
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
