@@ -37,6 +37,30 @@ About rumor is page dedicated to our policy and license.
 
 <br />
 
+### Create New Room
+User can create new room in order to invite people to it. Chat then can be renamed.
+![rumor4](https://user-images.githubusercontent.com/85360923/174448536-a27ff282-247f-473f-9d0b-8bba74ed3172.gif)
+
+<br />
+
+### Search For Phrases
+Every user in chat room can search for phrases.
+![rumor5](https://user-images.githubusercontent.com/85360923/174448625-9e092829-bea1-4318-93a4-cc6842dc562e.gif)
+
+<br />
+
+### Requests
+Users after invitation get requests, after accepting them they got access to new rooms.
+![rumor6](https://user-images.githubusercontent.com/85360923/174448865-db926efa-3ef1-49a3-ae03-c9982e82851f.gif)
+
+<br />
+
+### Leave
+Users can leave rooms in every moment they please.
+![rumor7](https://user-images.githubusercontent.com/85360923/174449002-3c2ca730-ab0b-4aa8-88e5-a29afb8df2ed.gif)
+
+<br />
+
 ### Data known by the server: 
 <ul>
 <li>Usernames</li>
