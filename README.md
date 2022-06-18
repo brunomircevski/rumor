@@ -52,7 +52,7 @@ About rumor is page dedicated to our policy and license.
 <li>Decryption keys</li>
 </ul>
 
-## Backend by Bruno Mircevsju
+## Backend by Bruno Mircevski
 ## Design and Frontend by Micota Kamil
 ## Search algorithm by Jakub Mieczkowski
 
