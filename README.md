@@ -8,6 +8,7 @@
   
   <p align="center">
     Simple real time chat application with end-to-end encryption.
+    Design inspired by the work of Terry A. Davis.
     <br />
   </p>
 </div>
