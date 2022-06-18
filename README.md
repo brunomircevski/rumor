@@ -2,8 +2,13 @@
 
 <!-- PROJECT LOGO -->
 <br />
+
+![Zrzut ekranu 2022-06-18 173235](https://user-images.githubusercontent.com/85360923/174445845-9494a685-987c-4823-aa9b-f16643f0c616.png)
 <div align="center">
-  ![Zrzut ekranu 2022-06-18 173235](https://user-images.githubusercontent.com/85360923/174445751-137c403d-597d-4289-b93b-8e91ef400b49.png)
+  
+  ![Zrzut ekranu 2022-06-18 173235](https://user-images.githubusercontent.com/85360923/174445845-9494a685-987c-4823-aa9b-f16643f0c616.png)
+
+  
   <p align="center">
     Simple real time chat application with end-to-end encryption.
     <br />
