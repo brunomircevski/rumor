@@ -3,9 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  
   ![Zrzut ekranu 2022-06-18 173235](https://user-images.githubusercontent.com/85360923/174445845-9494a685-987c-4823-aa9b-f16643f0c616.png)
-  
   <p align="center">
     Simple real time chat application with end-to-end encryption.
     <br />
@@ -15,7 +13,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Project created in order to learn new technologies: Django, Bootstrap, SQLite, JavaScript. The idea of project is close to my heart: eco-friendly, cheap and fun - second hand clothing.
+Project created in order to learn algorithms and data structures and technologies: JavaScript, HTML, CSS. 
 
 ## Functionality Of The Project:
 
